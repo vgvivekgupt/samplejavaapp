@@ -2,3 +2,5 @@ Welcome to the World
 For checking the diff command
 For checking the reset command
 Hello World
+Hi Man
+Hello Man
