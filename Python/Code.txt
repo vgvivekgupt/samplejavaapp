@@ -1,0 +1,124 @@
+#Vivek_Gupta     = _ is called snake case.
+#PI              =   We use upper case for varible to indicate that varibale value never gonna to change.
+
+#4 / 2 = 2.0
+#4 // 2  = 2     Always values comes in integer not in float
+#%       =       It will provide to values with reminder.
+#board mass method
+
+
+age = 34
+print(f"Your are is: {age}")
+
+#--
+name="vivek"
+greeting= "How are you {}"
+final_greeting=greeting.format(name)
+print(final_greeting)
+
+
+name="noo"
+noo_greeting="how are you {}"
+final_noo_greeting=noo_greeting.format(name)   #final_noo_greeting=noo_greeting.format(name="noo") / final_noo_greeting=noo_greeting.format(name=name)
+print(final_noo_greeting)
+
+#--
+my_name='Vivek'
+your_name=input("Enter your name:- ")
+
+print(f"My name is {my_name}, Your name is {your_name}")
+
+age=int(input("Enter your age:- "))
+print(f"Your age is {age * 2}")
+
+#--
+
+num1=int(input("Enter you first number:- "))
+num2=int(input("Enter your second number:- "))
+
+print(num1 == num2)
+print(num1 >= num2)
+#print(num1 1<= num2)
+
+
+default_age = 30
+age = 0 or default_age
+
+print(default_age)
+
+
+name = "there"
+your_name = input("Enter you name: (optional)")
+greeting = name or your_name
+
+print(f"Hello,{greeting}")
+
+#--
+
+friend=[12,[23,34,],[34,34],[54,43]]
+print(friend[1][0])
+
+#--
+
+friend=("23","12","qwerty")
+friend= friend + ("qwerty","asd")
+print(friend)
+
+#--
+
+friend={"Vivek","Gupta","Prabhu"}
+friends={"Apple","Mango","Prabhu"}
+test_1= friend.difference(friends)
+test_2 = friends.difference(friend)
+
+print(test_1)
+print(test_2)
+
+#--
+
+friend={"Vivek","Gupta","Prabhu"}
+friends={"Apple","Mango","Prabhu"}
+test_1= friend.symmetric_difference(friends)
+test_2 = friends.symmetric_difference(friend)
+
+print(test_1)
+print(test_2)
+
+#--
+
+friend={"Vivek","Gupta","Prabhu"}
+friends={"Apple","Mango","Prabhu"}
+test_1= friend.intersection(friends)
+test_2 = friends.intersection(friend)
+
+print(test_1)
+print(test_2)
+
+#--
+
+grade=[23,45,23,55,23]
+sun=sum(grade)
+san=len(grade)
+print(sun)
+print(san)
+average = sun / san
+print(average)
+
+#--
+
+friends=["Vivek","Gupta","Prabhu"]
+comma_separated=", ".join(friends)
+
+print(comma_separated)
+
+#--
+
+learning = True
+
+while learning:
+  print("This is learing way")
+  user_input=input("Are you learing(Yes/No):- ").strip()
+  learning = user_input == "Yes"
+
+#--
+

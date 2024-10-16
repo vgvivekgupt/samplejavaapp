@@ -1,0 +1,597 @@
+Python - Programming language
+Python is General Purpose & Higher Level Language.
+python --version
+
+Code -> byte-code(consider the code in byte) -> PVM(It's take the each byte and compile) -> 01 -> Linux (It's also enterpreten)
+
+Functions
+	Funtions are pre-difine function (print,type..).
+	Built in function(print)
+	Module level function(import math-<group>)
+	User define function
+
+Variables
+
+	RAM has Stack and Heap.
+	Heap -> values - class - refrence
+	RAM -> variable name 
+	Garbage Collector -> Delete the unwanted variable
+	Backend heap id
+		#id(varibale_name)
+
+	It's a case-sensetive (small and Capital alphabate not behavious same)
+	We cannot define number of starting variable.
+	We cannot use special character in from of variable except '_ '.
+	We cannot use variable which already exist as funtion and keywords(if,else) in python.
+	There is not limit for the varible and values.
+{
+#help()
+#modules
+#keywords 
+Enter to come out.
+}
+
+{
+Python ERROR
+	Syntax Error (If any line have a syntax whole program will not run)
+ 	Run Time Error (upto correct program will run, like name error)
+	Indentation Error
+}
+
+Number Type(int)
+	Decimal		=	Based 10 (0-9)		anynumber by default take in decimal
+	Binary		=	Based 2  (0-1)		a=0b1111 or a=0B1111
+	Octal		=	Based 8  (0-7)		a=01233  or a=0O1234
+	Hexadecimal	=	Based 16 (0-9 A-F)		a=0x12ac or a=0X12acb
+
+	By default the data print in decimal. or We can print according to our need.
+
+Data Type = 14 (a(Variable)=10(data or values))
+	
+	Whenever we give the number the python accept the number in decimal by default.
+	We no need the define the data type python will take auto the data type but not in C.
+	We can check the type of data using 'print(type(a)) or type(a).
+	Python data type id dynamic.
+	
+	=> int (integer) The plan number is called integer number like (1234456789)
+		#a=1
+		#print(a)
+		#print(type(a))
+		#a=0b1111 or a=0B1111
+		#a=0o1233  or a=0O1234
+		#a=0x12ac or a=0X12ac
+		#import sys
+		#sys.getsizeoff(a)
+		
+	=> float
+	Float won't accepts any number except float not even binary.
+		#a=100.70
+		#print(a)
+		#print(type(a))
+		#a=1.e5
+
+	=> Complex
+	Complex number need to to make electrical base application.
+	If root don't have reminder then it's a real number otherwise It's a imaginary number(under root -1)=i.
+	In python rather of i we call j or J as a imaginary number.		
+	Real + Imaginary = Complex Number.
+	Real number we can give any number like decimal, binary....
+	Imaginary we can give only in decimal.
+		#a=20+10j
+		#a=0o123+10j
+		#print(a)  real+imaginary
+		#print(a.real)	Only real
+		#print(a.imag) only imag
+
+	=> Bool
+	The output come in i word like true or false, yes or no, 0 or 1.
+	It should be F for False (0) and T for True (1).
+		#a=True
+		#a=False
+		#print(a)
+		#print(type(a))
+		#a=100
+		#b=200
+		#c=a>b
+		#print(c)
+ 		#a=(True-False)
+		#print(a)
+
+	=> Str (string)
+	We have to use ' or " or ''' or """ for string.
+	This is (Slice Operator)indexing method like Positive number start with 0 [1],[1:2]/ Negative number start with -1 [-1],[-1:-2].
+		#a='Vivek'
+		#a="Vivek"
+		#a='''Vivek
+			Gupta'''
+		#a="""Vivek
+			Gupta"""	
+		#a="""Vivek 'Gupta'"""
+		#a="Vivek 'Gupta'"
+		#print(a[1])
+		#print(a[-1])
+		#print(a[0:4])
+????????		#print(a[-1:-3])
+		#print(a[0:])
+		#print(a[:4])
+		#print(a[:])
+		#print(a.upper())
+		#print(a.lower())
+		#a='Vivek'
+		#b=a.replace("Vivek","Gupta")
+		#print(b)
+		#a='Vivek' + '10'
+		#a='Vivek' * 10 	(Vivek multiple by 10).
+		#print(a [1:20:2])	It'll print the 1 to 20 characters with only second characters.
+		#output=a[0].upper()+a[1:-1]+a[-1].upper()
+
+	=> List[] (collection) (Hatrogenous) 
+	List also follow the order.
+	In the list data type duplicate is allowed.
+	We can use multi data in the list and also we can use number of variable like data type.
+		#a=[]			=	We can make list value empty.
+		#a=['Vivek','Gupta',20,1.5,True,(20+10j)]
+		#print(type(a))
+		#print(a)
+		#print(a[0])
+		#print(a[1:2])
+		#a.append('VIVEK')
+		#a.remove('VIVEK')
+		#a[2]='VIVEK'		=	To replace by using index values.
+		
+
+	=> Tuple()
+	List and Tuple data type both are same just they have one diffenece list we can edit and read, But in tuple data type we can just read the values.
+	We can overwrite the values using same variable.
+		#a=(100,300,'Vivek','Gupta')
+		#print(type(a))
+		#print(a)
+		#print(a[1])
+		#print(a[1:2])
+		#a=(100)		=	Type will show the int.
+		#a=(100,)		=	Now It'll show tuple type.
+		
+
+	=> Set {}
+	append means It'll append the data is the last like order wise.
+	add means It can add the data any where of the file or line.
+	It is similar to list and tuple data type and set doesn't support duplicate, order, Indexing method, slice opertor, replacing because of indexing.
+	We use set data type to just keep the data.
+
+		#a={}			=	If we make empty set data It'll be dict data type. If you want set empty data then
+		#a=set()		=	To make set empty data.	
+		#a={10,20,'Vivek','Gupta'}
+		#print(a)
+		#print(type(a))
+		#a.add(100)
+		#a.remove(100)
+
+	=> Frozenset
+	It is similar to the set just there is one differnce that is not changes like add , remove, replace.
+
+		#a=frozenset ({10,20,30,'Vivek'})
+		#print(a)
+		#print(type(a))	
+
+
+
+	=> Dict (key:values) 
+	It's not follow the order and also indexing and slice not work also not support duplicate.
+	We can store the values in key pairs and we can add the values and replace.
+
+		#a={}			=	To empty dict data type.
+		#a={'Name':'Vivek', 'Account':12345}
+		#print(a)
+		#a['Last Name']='Vivek'	=	Add the key and values.
+		#del a['Last Name']	=	To delete the key auto pairs will delete.
+		#a['Name']'='Prabhu'	=	To replace the values.
+
+				
+	=> Range
+	We are providing the range the in number values.
+	We cannot be chnage if once values has been defined so na add remove or replace.
+		#a=range(10)
+		#print(a)
+		#for x in a:
+		#print(x)
+		#a=range(3,10)
+		#print(a[0])
+		#print(a[1:3]
+		#r=a[2:4]
+		#a=range(1,20,2)	=	2 will substract from each one.
+		#a=range(20.1,3)
+		#a=range(20,3,-3)
+
+	=> Bytes Data Type
+	To manipulate the binary values.
+	We cannot make chnages in the bytes data type.
+		#a=bytes([10,20,20])
+		#print(a[2])
+		#for x in a;
+		#print(x)
+
+	=> Bytes Array
+	0-255 range bytes.
+	Bytes and Bytes Array are similer but in bytes array data type we can do the chnages.
+		#a=[20,20,40,50]
+		#print(a)
+		#b=bytearray(a)
+		#print(b)
+		#print(type(b))
+
+
+	=> None Data Type
+	We are just reserving the variable to use when the need that type of variable.
+		#a=None
+		#id(a)
+		#type(a)
+		#print(type(a))
+		
+		#def Vivek():
+		#Print("Welcome")
+		#abc=Vivek
+		#print(type(abc))
+	
+	=> Python base Conversion (Type casting)
+	We no need to convert the binary, octal, Hexadecimal because number is already in decimal, but decimal can convert in the binary, octal, hexadecimal.
+		#bin(10)
+		#bin(23)
+		#bin(23ab)
+		#bin(0X23)
+
+	
+	=> Type Conversion Function
+
+	- int()
+	- float()
+	- bool()
+	- complex()
+	- str()
+
+	For int:-
+		Complex cannot covert in int.
+		Str can covert only base 0-9 number only.
+		#int(100.5)
+		#int(True)
+		#int('100')
+			
+	For float:-
+		Complex number cannot convert in float.
+		Str can covert only base 0-9 number only.
+		
+		#float(100)
+		#float(0B10)
+		#float(0O0128)
+		#float(0X12ab)
+		#float(True)		
+
+	For complex:-
+		
+		#complex(100)
+		#complex(0B10)
+		#complex(0O0128)
+		#complex(0X12ab)
+		#complex(100.5)
+		#compex(True)
+		#complex('100')
+
+	For bool:-
+
+		#bool(000)
+		#bool(0B00)
+		#bool(0O000)
+		#bool(0X000)
+		#bool(000.0)
+		#bool(00+0j)
+		#bool('100')
+		#bool('ABC')
+		
+
+	For str:-
+		If any values or word using '' then It's will become string.
+		#str(1000)
+		#str(0B00)
+		#str(0O000)
+		#str(0X000)
+		#str(000.0)
+		#str(00+0j)
+		#str(True)
+		#str(False)
+
+
+	=> Python data type Mutable, Immutable & Reusability.
+		#id(a)	
+
+	Mutable:-
+	The id will be same after changes.
+		list
+		set
+		dict
+		bytearray
+
+	Imutable:- (Resuability)
+	The id will be not same after changes.
+		int
+		float
+		bool
+		complex
+		str
+		tuple
+		frozenset
+		range
+		bytes
+
+
+	=> Python Escape Character
+	WE can escape the natural dupty while using \"Vivek\".
+		
+
+	\'
+		#print("I am the \'Vivek'\")
+	\"
+		#print("I am the \"Vivek\"")
+	\
+		#print("I \
+			am /
+			Vivek")
+	\\
+		#print(" I am Vivek \\")				= After or before special character we have to use to print\.
+	\n
+		#print("
+	\t
+		#print("I \tam \tVivek".expandtabs(tabsize=4))		= To define the tab size.
+		#print("I \tam \tVivek")				= To provide the tab (default 8 digit tab)
+	\r
+		#print("I am Vivek \rYou are Devil")			= To replace the work or line.
+	\b
+		#print("I am \bVivek")					= To use one backspace.
+	\octcal value
+		#print('\o12\o45\o67')
+	\hexadecimal
+		#print('\x48\x45\ab')
+
+
+	=> Python Comments
+	We can discribe the code while using the comments method.
+	
+	#Discribing my Name
+	#""" Discribing
+		my Name """
+	#print("I am Vivek")
+
+	
+
+	=> Python indentifiers
+	
+	Indentifiers is nothing but its just variable function can indentifi easy
+	Front character of variable or indentifer a-z, A- Z, _ These are only allow except this nothing is allow in indentifier including specical characters.
+	
+
+
+	=> Python operators (06)
+
+	- Arithmetic Operator's
+		+:-
+			#10+4 = 14
+		-:-
+			#10-4 = 6
+		*:-
+			#10*2 = 20
+		/(float Division):-
+			#10/2 = 5.0
+		%(Modulo Devision:-
+			#10%4 = 2
+		//(Floor Devision):-
+			#10//4 = 2
+			#-10//4 = 3
+		**(Power):-
+			#1**3 = 1000
+
+
+	- Relational Operator's
+		#ord(a)
+		(>,<,>=,<=,=(a=10(assign the values)),==,!=)
+
+	- Logical Opertor's
+		(and,or,not)
+		Boolean_;
+		True and True = True
+		False and True = False
+		True and False = False
+		False and False = False
+		Non-Boolean
+		None = False
+		0 = False
+		0.0 = False
+		"" = False
+		Not True
+		Not True = False
+		Not False = True
+
+	- Assignment Operator's
+		#a=b=c=10
+		#a,b,c=10,20,30
+		#a=10
+		#a=a+5	=	Id won't changes.
+		
+		
+	- Identity Operator's
+
+		Refer the identifiers
+	- Membership Operator's
+
+		Searching the values on defined variables values.
+		#a='Vivek'
+		#Vi in a
+		#Vi not in a
+
+	=> Ternary Opeator's
+		First_Values conditions else Second_Values.
+		#a=100 if b> c else G
+		#print(a)
+
+	=> Many operator use in single time, On google we can find that to which it will give first like BODMAS.
+
+
+	=> Bitwise Operator's
+	- & (AND)
+	- | (OR)
+	- ^ (NOT)
+	- << (Left Shift)
+	- >> (Right Shift)
+
+	
+	=> Print Function
+		#print("I am Vivek")	=	Next line if don't have values then it's comes blank because of ("I am Vivek",end='\n'), To remove ("I am Vivek",end=''), ("I am Vivek",end='Finish').
+		#("I am Vivek",sep='\n',end='')
+		
+		#a=10
+		 b=100
+		 c="Vivek"
+		#print(b,"Is an Interger Values",c,"Is a Sreing Values")
+		#print("{0} Is an Interger Values {1} Is a Sreing Values" .format(a,c))
+		#print()	=	We can use 	 extra space.
+
+		#print(a);print(b);print(c)	=	We can use multiple program by using ;.
+		#Name,Address,Age='Vivek','Mumbai',24
+		#print(Name,Address,Age)
+
+
+
+	=> Input Function
+	
+	We will ask the data from the user this process is also called taking input from the users.
+		#Name=str(input("Enter your name:- "))
+		 Address=str(input("Enter your address:- "))
+		 Age=int(input(Enter your age:- "))
+		#print(Name,Address,Age)
+		#Total=int(a)+int(b)
+		
+
+
+	=> Indentation and Margin  4space or tab
+
+
+	=> Python Conditional Statement
+
+	- if Statement
+
+		#if condition: or if (condition):
+			statement-1
+			statement-2
+			statement-3
+		statement-4
+
+		#a=10
+		 b=5
+		 if a > b:	= If condition not ture then It'll not print any print.
+		 	print("A Greater than B")
+		 	print("A Greater then B")
+		 	print("A Greater then B")
+
+		#a=int(input("Enter Number a:- ")
+		 b=int(input("Enetr Number b:- ")
+		 if a+b:
+			print("Sum of a and b ==",a+b)
+			print("value of a",a)
+			print("Value of b",b)
+
+
+		#if Name:='Vivek':
+		#if 'P' in 'Prabhu':
+		#if 'xxx' in ['laptop','desktop']:
+				
+
+	- if-else
+		#if condition: or if (condition):
+			statement-1
+		 else:
+			statement-2
+			statement-3
+		statement-4
+
+
+		#age=int(input("Enter you age:- "))
+		 print()
+		 if age >= 18:
+			print("You are eligible for vote")
+		 else:
+			print("You are not eligible for vote")
+
+		#a=eval(input("Number:_"))
+			eval = Manage my number of string.
+
+		#print()
+		 num=int(input("Enter your Number:- "))
+		 print()
+		 if num >=1 and num<= 100:
+        		print("Your Number is ",num, "It is between 1 and 100")
+		 else:
+        		print("Your Number is ",num, "It is not between 1 and 100")
+		 print()
+
+		#import os
+		 shutdown = input("DO you wish to shutdown your Computer ? Yes/No: ")
+		 if shutdown == "No":
+			exit()
+		 else:
+			os.system("shutdown now 1")
+		
+
+
+	-if-elif-else
+		
+		#if condition: or if (condition):
+			statement-1
+			statement-2
+		 elif condition :
+			statement-1
+			statement-2
+		 elif condition :
+			statement-1
+			statement-2
+		 else:
+			statement-1
+			statement-2
+		statement-4
+
+
+		#varname=eval(input("Enter the value: "))
+		 if (type(varname) == int ):
+			print("Type of varibale is Integer")
+		 elif (type(varname) == float):
+			print("Type of variable is Float")
+		 elif (type(varname) == complex):
+			print("Type of variable is Complex")
+		 elif (type(varname) == bool):
+			print("Type of variable is bool")
+		 elif (type(varname) == string):
+			print("Type of variable is string")
+		 elif (type(varname) == tuple):
+			print("Type of variable is Tuple")
+		 elif (type(varname) == Dict):
+			print("Type of variable is Dictionaries")
+		 elif (type(varname) == list):
+			print("Type of variable is List")
+		 else:
+			print("Type of variable is unknow")
+
+
+
+
+	=> Nested if
+		When we are want to match number of condition ture.
+		
+		#a=10
+		 b=20
+		 c=30
+		 if a==10:
+			if b==20
+				if c==30
+					print("Value of A",a)
+				else:
+					print("Your Third condition is wrong")
+			else:
+				print("Your Second condition is wrong")
+		else:
+			print("Your First condition is wrong")

@@ -1,0 +1,156 @@
+IDE 
+
+print("Hello " + input("What is your name? :-  "))
+Question 2
+What is the ToString format code for percentage?
+min(2,23,4)
+max(2,4,5,3)
+import
+math.pi
+math.
+
+annualsalary = input("")
+monthlysalary = int(round(float(annualsalary)/12.0))
+print(monthlysalary)
+
+
+If condition Then
+    ' Code to be executed if condition is true
+End If
+
+break and continue statement
+date year month day
+
+srtftimt
+srtptimt
+import datetime
+
+x = datetime.datetime.now()
+print(x)
+--
+import datetime
+
+x = datetime.datetime.now()
+
+print(x.year)
+print(x.strftime("%A"))
+
+--
+import datetime
+
+x = datetime.datetime(2020, 5, 17)
+
+print(x)
+
+--
+
+import datetime
+
+x = datetime.datetime(2018, 6, 1)
+
+print(x.strftime("%B"))
+
+--
+
+.strip()        #remove thw whitespace
+
+--
+one = 2
+two = 51
+three = 99.95
+myorder = "I want {} items of type {} for {} dollars."
+print(myorder.format(one,two,three))
+
+--
+
+print('{0:8d}'.format(123))
+print('{0:8.2f}'.format(1234.5678))
+Which format type is for printing a spring?
+--
+from datetime import datetime, timedelta
+
+y = int(input("Enter a number of days: "))
+x = datetime.now() + timedelta(days=y)
+formatted_date = x.strftime("%A, %B %d, %Y")
+print(formatted_date))
+
+--
+sum = 0
+y = float(input())
+while y != -1:
+  sum += y
+  y = float(input())
+print("{0:3.2f}".format(sum))
+
+--
+
+def my_function(fname):
+  print(fname + " Refsnes")
+
+my_function("Emil")
+my_function("Tobias")
+my_function("Linus")
+
+---
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+p1 = Person("John", 36)
+
+print(p1.name)
+print(p1.age)
+
+---
+class BMI:
+    def __init__(self, Weight=0, Height=0):
+        self.Weight = Weight
+        self.Height = Height
+    
+    def BMI_Value(self):
+        return round(self.Weight / (self.Height ** 2), 2)
+
+--
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+================================
+Question 11
+What is the option in SSH for automatically accepting unknown host key fingerprints?
+
+1 point
+
+StrictHostKeyChecking=no
+
+
+StrictHostKeyChecking=yes
+
+
+HostKeyChecking=no
+
+
+HostKeyChecking=yes
+
+--
+/etc/ansible/ansible.cfg
+ansible --version
+
+ANSIBLE_HOST_KEY_CHECK=False ansible all -m Ping -o
+
+-m setup
+- m setup | more
+

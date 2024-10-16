@@ -1,0 +1,421 @@
+Application area of Python
+Web-Application
+API Development
+Desktop GUI Application Development
+Data Analysis
+AI (Artificial Intelligence)
+Web Scraping & Text Processing
+Selenium Testing with Python
+Automation
+---
+Python is a powerful multi-purpose programming language created by Guido van Rossum.
+--
+What is pip?
+--
+Download the tar of python package
+untar (tar -xzvf .tar)
+Then we need to complie the file. So we need software.
+ 	= yum install gcc openssl-devel bzip2-devel libffi-devel
+	cd python3.7
+	./configure --enable-optimizations
+	./configure --prefix=/opt
+	The default installation location is:/usr/local/bin
+make (complie code)
+make altinstall  (install)
+Create a soft-link and then verfiy installtion by running
+	python3 --version
+	pip3 --version
+cd /usr/local/bin
+ ./python3.7 --version
+which python3.7
+echo $path
+ln -s python3.7 python3 
+pip3.7 --version
+ln -s pip3.7 pip3
+--
+Indentation in Python
+- Indentations are used to represent a block of code.
+-  The amount of indentation is up to you, but it must be consistent throughout that block.
+- Don't include an indent unnecessarily.
+--
+ Comments in Python
+'''
+'''
+#
+--
+Special characters of Python
+Write special characters only inside of quotestion "" ,"".
+\n = New Line
+\b = comeback one position 
+\b\b = comeback two position
+\t = use tab
+\ = Escape symbol
+print('python\'s class')
+print("\"python\" class ")
+--
+Running Python Script on Windows and Linux OS's.
+{
+#!/usr/local/bin/python3	=	Location of python (shebang line)
+} execte permission required
+--
+Working with variable
+Varibale, Declare, Displaying, using, Re-declare, Delete, Rules of define a variable
+A variable is nothing but a reserved memory location to store values. In others words a variable in a program gives data to the computer to work on. 
+x = 4
+print(X)
+print(type(x))
+If you re-declare the variable the no need to tell that to print statement.
+ del x = to delete varibale which has declare as x.
+Rule to define a varibale names?
+	It contains letters, numbers and underscore.
+	It should not a keyword.
+	Can't contain spaces.
+	It should not start with a number.
+	Case-Sensitive.
+--
+Data Type  or Varibale type Data Type in Python.
+print(id(x))	=	Memory location of variable.
+Data types in Python
+	- Numbers (int, float and complex)
+	- Strings
+	- Boolean
+Note: type(variable_name) will give the type of data stored in variable.
+x=3;y=5.6;z=3+4j
+print(x,y,z)   
+print(x,type(x))
+x=True
+y=False
+-- 
+Typecasting or Type conversion
+Converting one Data Type to another
+ 	int, float, complex
+	str
+	bool
+Note: Any data type can be converted into boolean.
+	bool (any_data_type)=True or False.
+	bool(empty)=False ==> bool(0), bool(None), bool([]), bool(()), bool({})
+bool(non-empty)=True
+Any data type can be converted into a string but reverse is not always true.
+x=56
+print(x,type(x))
+y=str(x)
+print(y,type(y))
+z=bool(x)
+print(z,type(z))
+--
+print with variable(s) and string(s)
+	
+print(x,y,lang_name)
+print("{} \n{} \n{}.format(y,x,lang_name))
+print(f"x value is {x} \n y value is {y} /nlang value is {lang_name}")
+my_req_output=f"x value is: {x} \n y value is {y} /nlang value is {lang_name}
+print(my_req_output)
+--
+Input and Output statement of Python and usage of evaluation function.
+x=input("Enter any number: )
+x=int(input('ENter any number: "))
+x=eval(input("enter any str : ))
+Enter any str: "Vivek"
+--
+Working with Python Strings
+This converstion of character to a number is called encoding, and the reverse process is decoding. ASCII and Unicode are some of the popular encoding used.
+In pythone, string is a sequence of Unicode character. Unicode was introduced to include every character in all languages and bring uniformity in encoding.
+x='Vivek'
+x="Vivek"
+x="""
+Vivek
+Gupta
+"""
+print(f'{bool(my_str)}')
+print(x[0])
+print(x[0:3])
+print(x[-1])
+print(x[-5:-1])
+print(x[:6])
+Note: (Strings are immutable. This means that elements of a string cannot be changed once it has been assigned. We can simply ressign different strings to the same name)
+print(f'{len(x)}')
+y=str1+" "+str2+" "+"str3"
+--
+Case conversion operations on strings
+x="Vivek"
+print(dir(x))
+--
+Boolean result operations on strings
+help(str)
+--
+Join, Center and zfill string operations
+y="-".join(x)
+print("*".join(x))
+print("\n".join(x))
+print("\t".join(x))
+-
+print(str.center(20))
+print(f"{str1.center(20)}\n{str2.center(20)}")
+print(str.zfill(10))	padding
+--
+Strip and split opertations on string
+strip remove unwanted space (started and ending space or word - only)
+print(x.strip())
+print(x.strip('p'))
+print(x.rstrip(n))
+print(x.lstrip(p))
+print(x.strip('Gupta'))
+print(x.strip("p").rstrip("n"))
+-
+print(x.split())
+print(x.split('is'))
+split means the word like list
+--
+Count, index and find operations on strings
+x.count('p')
+x.count('p',1)		form 1 index
+x.index('is')
+x.index('is',23)
+x.find('z')
+x.find('z',22)
+--
+mode command to know number of column, line of terminal.
+import os	To get os information.
+os.get_terminal_size().columns
+print(x.center(122).title)
+print(x.ljust(122).title)
+print(x.rjust(122).title)
+--
+Data Structure of Python (also called a varibale)
+Data Structure are used to store a collection of data.
+There are four built-in data structure.
+	- list []
+	- tuple ()
+	- dictionary {} with key value pair
+	- set {}
+--
+List []
+--
+Identity operators:
+Identity operators are used to find the type of: class/type/object.
+They are two type of identity operator.
+	- is
+	- is not
+Membership operators:
+Membership operator are used to validate the membership of a value.
+They are two types of Membership operator
+	- in
+	- in not
+--
+and = If anyone of the condition is false then result is also false.
+or    = If anyone of the condition is true then result is also true
+not  = false, not false == true
+all == and
+any == or
+--
+type test.py
+Conditional Statements of Python
+
+
+ord('a')     asici code
+ord   = order
+chr	= character
+  Identity operators are used to find the type of: class/type/object.
+type(x) is type(y)
+type(z) is not type(y)
+6 in x
+--
+help("modules")
+path/pip install maths
+A module is a file containing Python definitions and statement. That means, module containing python function, classes and varibale.
+use of module	=	Reusability
+Note: if script name is mymodule.py, then module name is mymodule.
+Type of Python Modules
+	Default Modules
+	Third Party Modules
+Import either default or third party modules before using them.
+improt math as m (alias name)
+import math pi
+from math import *
+from math import pi,pow
+import platform, math,sys,os.sunprocess
+import plateform
+import math
+import os
+print(math.pi)
+--
+platform	=	system information
+getpass	=	Prompts the user for a password without echoing. The getpass module provides a secure way to handle the password prompts where programs interact with the users via the terminal.
+getuser	=	Function display the login name of the user. This function checks the environment varibale LOGNAME, USER, LNAME and USERNAME, in order, and returns the value of the first non-empty string.
+import getpass
+db_pass=getpass.getpass()
+db_pass=getpass.getpass(prompt="Enter your bd pass:")
+print(f"BD pass: {db_pass})
+print(getpass.getuser())
+sys.exit()	=	Stoping the running python script.
+--
+sys.argv of sys modules
+sys.argv return a list of command line arguments pass to a python scripts.
+python3 test.py arg1 arg2 arg3
+if len(sys.argv) != 3:
+	print()
+	sys.exit()
+--
+os module
+This module is used to work/interact with operating system to automate many more tasks like creating directory, removing directory, identifying current directory and many more.
+
+Operations of os modules Four parts of OS
+	os
+	os.path
+	os.system()
+	os.walk()
+ Simple operators
+print(os.sep)
+path is always string
+window need \\ for path
+print(so.getcwd())
+print(os.chdir("/home"))
+print(os.listdir())
+print(os.listdir("/home/user_name"))
+print(os.mkdir("vivek"))
+print(os.mkdirs("vivek"))	=	For recursive
+print(os.removedir())
+print(os.removedirs())
+os.rmdir(path)
+os.rename(src,dst)
+os.environ()
+os.getuid()
+os.getpid()
+--
+os.path module
+os.path is a sub module of os
+os.path.sep
+os.path.basename(path)
+os.path.dirname(path)
+os.path.join(path1,path2)
+os.path.split(path)		=	is used to split the path name into a pair head and tail.
+os.path.getsize(path)	=	in bytes
+os.path.exists(path)
+os.path.isfile(path)
+os.isdir(path)
+os.islinkpath
+After time module we will also discuss: getatime, getctime and getmtime.
+--
+os.system() from os modules
+import os
+cmd="date"
+rt=os.system(cmd)
+if rt==0:
+	print("your")
+else:
+	print("")
+--
+os.walk(path)
+used to generate directory and file names in a directory tree by walking.
+Note: FIrst complete for loop then start this os.walk
+ for r,d,f in f:		r=root dir, d= dir, f= file
+import os
+import string
+import platform
+req_file=input("Enter your file name to search: ")
+
+if platform.system()=="Windows":
+	pd_names=string.ascii_uppercase
+	vd_names=[]
+	for each_drive in pd_names:
+		if os.path.exists(each_drive+":\\"):
+			#print(each_drive)
+			vd_names.append(each_drive+":\\")
+	print(vd_names)
+	for each_drive in vd_names:
+		for r,d,f in os.walk(each_drive):
+			for each_f in f:
+				if each_f==req_file:
+					print(os.path.join(r,each_f))
+else:
+	for r,d,f in os.walk("/"):
+		for each_file in f:
+			if each_file==req_file:
+				print(os.path.join(r,each_file))
+--
+Read a pth and check if given path is a file or a directory.
+import os
+path=input("Enter your path: ")
+
+if os.path.exists(path):
+	print(f"Given path : {path}is a valid path")
+	if os.path.isfile(path):
+		print("and it is a file path")
+	else:
+		print("and it is a directory path")
+else:
+	print(f"Given path : {path} is not existing on this host")
+-
+'''
+import os
+import sys
+path=input("Enter your directory path: ")
+if os.path.exists(path):
+	df_l=os.listdir(path)
+else:
+	print("please provide valid path")
+	sys.exit()
+	
+
+print(df_l)
+p1=os.path.join(path,df_l[0])
+p2=os.path.join(path,df_l[1])
+
+if os.path.isfile(p1):
+	print(f"{p1} is a file")
+else:
+	print(f"{p1} is a directory")
+
+if os.path.isfile(p2):
+	print(f"{p2} is a file")
+else:
+	print(f"{p2} is a directory")
+'''
+
+
+
+'''
+print("befor loop")
+
+for each in [2,3,4,5]:
+	print("hello",each)
+
+
+print("after loop")
+'''
+
+import os
+import sys
+path=input("Enter your directory path: ")
+if os.path.exists(path):
+	df_l=os.listdir(path)
+else:
+	print("please provide valid path")
+	sys.exit()
+
+
+list_of_files_dir=os.listdir(path)
+print("all files and dirs: ",list_of_files_dir)
+for each_file_or_dir in list_of_files_dir:
+	f_d_p=os.path.join(path,each_file_or_dir)
+	if os.path.isfile(f_d_p):
+		print(f'{f_d_p} is a file')
+	else:
+		print(f'{f_d_p} is a directory')
+--
+Loops
+Execute a block of code many times.
+iteration
+ALl programming languages need a way to execute block of code many times, this is possible with loops
+Python has two type of loop:
+	for loop
+	while loop
+For loop
+	The for loop in python is used to iterate over a sequence (list, tuple, string) or other iterable objects.
+--
+usr_str=input("Enter your string: ")
+
+index=0
+for each_char in usr_str:
+	print(f'{each_char} -->{index}')
+	index=index+1
