@@ -185,6 +185,9 @@ Data Type = 14 (a(Variable)=10(data or values))
 		#a['Last Name']='Vivek'	=	Add the key and values.
 		#del a['Last Name']	=	To delete the key auto pairs will delete.
 		#a['Name']'='Prabhu'	=	To replace the values.
+		a={'First Name':'Vivek', 'Last Name':'Gupta', 'Account Number':123456789}
+		print(a)
+		print(a['First Name'],a['Last Name'])
 
 				
 	=> Range
@@ -201,6 +204,19 @@ Data Type = 14 (a(Variable)=10(data or values))
 		#a=range(1,20,2)	=	2 will substract from each one.
 		#a=range(20.1,3)
 		#a=range(20,3,-3)
+		#for i in range(10,1,-2):
+		#    print(i)
+
+		#number=list(range(5))
+		#print(number)
+
+		#num=6
+		#for num in range(1,20):
+		#    print("Number is in range!",num)
+	
+		#for i in range(1,5):
+		#    for j in range(6,10):
+		#        print(f"Range of i: {i} Range of j: {j}")
 
 	=> Bytes Data Type
 	To manipulate the binary values.
@@ -219,7 +235,6 @@ Data Type = 14 (a(Variable)=10(data or values))
 		#print(b)
 		#print(type(b))
 
-
 	=> None Data Type
 	We are just reserving the variable to use when the need that type of variable.
 		#a=None
@@ -231,15 +246,53 @@ Data Type = 14 (a(Variable)=10(data or values))
 		#Print("Welcome")
 		#abc=Vivek
 		#print(type(abc))
+
+		def vivek():
+ 		   return "Authentication"
+		print(vivek())
+
+		def vivek():
+    			print("Authentication")
+		vivek()
 	
 	=> Python base Conversion (Type casting)
+
+	Data Type Conversion
+
+	Integer(int) To
+		Float(float)
+		String(str)
+	Float(float) To
+		Integer(int)
+		String(str)
+	String(str) To
+		Integer(int)
+		Float(float)
+	List(list) To
+		Tuple(tuple)
+		Set(set)
+		String(str) #if all element are string.
+	Tuple(tuple) To
+		List(list)
+		Set(set)
+	Set(set)
+		List(list)
+		Tuple(tuple)
+	Dictionary(dict) To
+		List(of keys, values, or items)
+	int(): Convert to int
+	float(): Convert to float
+	str(): Convert to string
+	list(): Convert to list
+	tuple(): Convert to tuple
+	set(): Convert to set
+
 	We no need to convert the binary, octal, Hexadecimal because number is already in decimal, but decimal can convert in the binary, octal, hexadecimal.
 		#bin(10)
 		#bin(23)
 		#bin(23ab)
 		#bin(0X23)
 
-	
 	=> Type Conversion Function
 
 	- int()
@@ -309,7 +362,7 @@ Data Type = 14 (a(Variable)=10(data or values))
 		dict
 		bytearray
 
-	Imutable:- (Resuability)
+	Immutable:- (Resuability)
 	The id will be not same after changes.
 		int
 		float
@@ -322,12 +375,26 @@ Data Type = 14 (a(Variable)=10(data or values))
 		bytes
 
 
+Type	Description	Example
+int	Integer values	5, -3
+float	Floating-point values	3.14, -0.001
+complex	Complex numbers	2 + 3j
+str	String (text)	"Hello, World!"
+list	Mutable ordered collection	[1, 2, 3]
+tuple	Immutable ordered collection	(1, 2, 3)
+dict	Key-value pairs	{'name': 'Vivek'}
+set	Unordered unique collection	{1, 2, 3}
+frozenset	Immutable set	frozenset({1, 2, 3})
+bool	Boolean values	True, False
+NoneType	Represents absence of value	None
+
+
 	=> Python Escape Character
 	WE can escape the natural dupty while using \"Vivek\".
 		
 
 	\'
-		#print("I am the \'Vivek'\")
+		#print("I am the \'Vivek\' ")
 	\"
 		#print("I am the \"Vivek\"")
 	\
@@ -366,27 +433,24 @@ Data Type = 14 (a(Variable)=10(data or values))
 	Indentifiers is nothing but its just variable function can indentifi easy
 	Front character of variable or indentifer a-z, A- Z, _ These are only allow except this nothing is allow in indentifier including specical characters.
 	
-
-
 	=> Python operators (06)
 
 	- Arithmetic Operator's
-		+:-
+		+
 			#10+4 = 14
-		-:-
+		-
 			#10-4 = 6
-		*:-
+		*
 			#10*2 = 20
-		/(float Division):-
+		/(float Division)
 			#10/2 = 5.0
-		%(Modulo Devision:-
+		%(Modulo Devision
 			#10%4 = 2
-		//(Floor Devision):-
+		//(Floor Devision)
 			#10//4 = 2
 			#-10//4 = 3
-		**(Power):-
+		**(Power)
 			#1**3 = 1000
-
 
 	- Relational Operator's
 		#ord(a)
@@ -448,7 +512,7 @@ Data Type = 14 (a(Variable)=10(data or values))
 		#a=10
 		 b=100
 		 c="Vivek"
-		#print(b,"Is an Interger Values",c,"Is a Sreing Values")
+		#print(b,"Is an Interger Values",c,"Is a String Values")
 		#print("{0} Is an Interger Values {1} Is a Sreing Values" .format(a,c))
 		#print()	=	We can use 	 extra space.
 
